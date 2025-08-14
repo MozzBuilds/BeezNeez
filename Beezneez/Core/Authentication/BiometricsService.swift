@@ -1,7 +1,7 @@
 import LocalAuthentication
 import OSLog
 
-class BiometricsManager {
+class BiometricsService {
     
     func authenticateBiometrics(successCompletion: @escaping () -> Void, failureCompletion: @escaping (Error) -> Void) {
         let context = LAContext()
