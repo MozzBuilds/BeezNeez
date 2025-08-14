@@ -29,9 +29,35 @@
 		A7418B342E4E603000A279CC /* BeezneezUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeezneezUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		A7418BCC2E4E73C000A279CC /* Exceptions for "Beezneez" folder in "Beezneez" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Core/Authentication/AppleSignInService.swift,
+				Core/CommonUI/Buttons/GoogleSignInButton.swift,
+			);
+			target = A7418B1C2E4E602E00A279CC /* Beezneez */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		A7418BCD2E4E73C000A279CC /* Exceptions for "Beezneez" folder in "Copy Bundle Resources" phase from "Beezneez" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = A7418B1B2E4E602E00A279CC /* Resources */;
+			membershipExceptions = (
+				Core/Authentication/AppleSignInService.swift,
+				Core/CommonUI/Buttons/GoogleSignInButton.swift,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		A7418B1F2E4E602E00A279CC /* Beezneez */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				A7418BCC2E4E73C000A279CC /* Exceptions for "Beezneez" folder in "Beezneez" target */,
+				A7418BCD2E4E73C000A279CC /* Exceptions for "Beezneez" folder in "Copy Bundle Resources" phase from "Beezneez" target */,
+			);
 			path = Beezneez;
 			sourceTree = "<group>";
 		};
