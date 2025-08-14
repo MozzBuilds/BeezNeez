@@ -1,0 +1,13 @@
+// MARK: - Login and Onboarding
+"welcome" = "Welcome!";
+
+// MARK: - Navigation and Titles
+"home" = "Home";
+
+// MARK: - Alerts
+"alert_ok" = "OK";
+"alert_cancel" = "Cancel";
+
+// MARK: - Buttons
+"button_cancel" = "Cancel";
+"button_next" = "Next";
