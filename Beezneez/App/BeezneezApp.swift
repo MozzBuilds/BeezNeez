@@ -2,11 +2,20 @@ import SwiftUI
 
 @main
 struct BeezneezApp: App {
+    @StateObject private var supabaseManager = SupabaseManager.shared
+
     var body: some Scene {
         WindowGroup {
             ContentView()
-            
-            // Set any URL Callback schemes here, onOpenURL
+                .environmentObject(supabaseManager)
+                .task {
+                    await supabaseManager.checkSession()
+                }
+                .onOpenURL { url in
+                    Task {
+                        try await supabaseManager.client.auth.session(from: url)
+                    }
+                }
         }
     }
 }

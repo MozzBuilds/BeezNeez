@@ -7,14 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A7418C8D2E4F724100A279CC /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = A7418C8C2E4F724100A279CC /* Auth */; };
-		A7418C8F2E4F724100A279CC /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = A7418C8E2E4F724100A279CC /* Functions */; };
-		A7418C912E4F724100A279CC /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = A7418C902E4F724100A279CC /* PostgREST */; };
-		A7418C932E4F724100A279CC /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = A7418C922E4F724100A279CC /* Realtime */; };
-		A7418C952E4F724100A279CC /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = A7418C942E4F724100A279CC /* Storage */; };
-		A7418C972E4F724100A279CC /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = A7418C962E4F724100A279CC /* Supabase */; };
-		A7418C9A2E4F72AA00A279CC /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = A7418C992E4F72AA00A279CC /* GoogleSignIn */; };
-		A7418C9C2E4F72AA00A279CC /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A7418C9B2E4F72AA00A279CC /* GoogleSignInSwift */; };
+		A73534F32E4FC8F8008731F0 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = A73534F22E4FC8F8008731F0 /* Auth */; };
+		A73534F52E4FC8F8008731F0 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = A73534F42E4FC8F8008731F0 /* Functions */; };
+		A73534F72E4FC8F8008731F0 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = A73534F62E4FC8F8008731F0 /* PostgREST */; };
+		A73534F92E4FC8F8008731F0 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = A73534F82E4FC8F8008731F0 /* Realtime */; };
+		A73534FB2E4FC8F8008731F0 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = A73534FA2E4FC8F8008731F0 /* Storage */; };
+		A73534FD2E4FC8F8008731F0 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = A73534FC2E4FC8F8008731F0 /* Supabase */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,29 +35,17 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Core/Authentication/AppleSignInService.swift,
-				Core/CommonUI/Buttons/GoogleSignInButton.swift,
+				Core/CommonUI/Buttons/Buttontest.swift,
 			);
 			target = A7418B1C2E4E602E00A279CC /* Beezneez */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-		A7418BCD2E4E73C000A279CC /* Exceptions for "Beezneez" folder in "Copy Bundle Resources" phase from "Beezneez" target */ = {
-			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
-			buildPhase = A7418B1B2E4E602E00A279CC /* Resources */;
-			membershipExceptions = (
-				Core/Authentication/AppleSignInService.swift,
-				Core/CommonUI/Buttons/GoogleSignInButton.swift,
-			);
-		};
-/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		A7418B1F2E4E602E00A279CC /* Beezneez */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				A7418BCC2E4E73C000A279CC /* Exceptions for "Beezneez" folder in "Beezneez" target */,
-				A7418BCD2E4E73C000A279CC /* Exceptions for "Beezneez" folder in "Copy Bundle Resources" phase from "Beezneez" target */,
 			);
 			path = Beezneez;
 			sourceTree = "<group>";
@@ -76,14 +62,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7418C912E4F724100A279CC /* PostgREST in Frameworks */,
-				A7418C8F2E4F724100A279CC /* Functions in Frameworks */,
-				A7418C972E4F724100A279CC /* Supabase in Frameworks */,
-				A7418C9C2E4F72AA00A279CC /* GoogleSignInSwift in Frameworks */,
-				A7418C8D2E4F724100A279CC /* Auth in Frameworks */,
-				A7418C952E4F724100A279CC /* Storage in Frameworks */,
-				A7418C932E4F724100A279CC /* Realtime in Frameworks */,
-				A7418C9A2E4F72AA00A279CC /* GoogleSignIn in Frameworks */,
+				A73534F72E4FC8F8008731F0 /* PostgREST in Frameworks */,
+				A73534F52E4FC8F8008731F0 /* Functions in Frameworks */,
+				A73534FD2E4FC8F8008731F0 /* Supabase in Frameworks */,
+				A73534F32E4FC8F8008731F0 /* Auth in Frameworks */,
+				A73534FB2E4FC8F8008731F0 /* Storage in Frameworks */,
+				A73534F92E4FC8F8008731F0 /* Realtime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,14 +119,12 @@
 			);
 			name = Beezneez;
 			packageProductDependencies = (
-				A7418C8C2E4F724100A279CC /* Auth */,
-				A7418C8E2E4F724100A279CC /* Functions */,
-				A7418C902E4F724100A279CC /* PostgREST */,
-				A7418C922E4F724100A279CC /* Realtime */,
-				A7418C942E4F724100A279CC /* Storage */,
-				A7418C962E4F724100A279CC /* Supabase */,
-				A7418C992E4F72AA00A279CC /* GoogleSignIn */,
-				A7418C9B2E4F72AA00A279CC /* GoogleSignInSwift */,
+				A73534F22E4FC8F8008731F0 /* Auth */,
+				A73534F42E4FC8F8008731F0 /* Functions */,
+				A73534F62E4FC8F8008731F0 /* PostgREST */,
+				A73534F82E4FC8F8008731F0 /* Realtime */,
+				A73534FA2E4FC8F8008731F0 /* Storage */,
+				A73534FC2E4FC8F8008731F0 /* Supabase */,
 			);
 			productName = Beezneez;
 			productReference = A7418B1D2E4E602E00A279CC /* Beezneez.app */;
@@ -200,8 +182,7 @@
 			mainGroup = A7418B142E4E602E00A279CC;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				A7418C8B2E4F724100A279CC /* XCRemoteSwiftPackageReference "supabase-swift" */,
-				A7418C982E4F72AA00A279CC /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				A73534F12E4FC8F8008731F0 /* XCRemoteSwiftPackageReference "supabase-swift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A7418B1E2E4E602E00A279CC /* Products */;
@@ -294,7 +275,6 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEV = YES;
 				DEVELOPMENT_TEAM = NH75BX6HA4;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -313,19 +293,18 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROD_DEBUG = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Dev;
 		};
-		A7418B3D2E4E603000A279CC /* Prod */ = {
+		A7418B3D2E4E603000A279CC /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReferenceAnchor = A7418B1F2E4E602E00A279CC /* Beezneez */;
 			baseConfigurationReferenceRelativePath = Environment/Configs/Prod.xcconfig;
@@ -362,7 +341,6 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEV = YES;
 				DEVELOPMENT_TEAM = NH75BX6HA4;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -375,16 +353,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PROD_DEBUG = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Prod;
+			name = Release;
 		};
 		A7418B3F2E4E603000A279CC /* Dev */ = {
 			isa = XCBuildConfiguration;
@@ -398,19 +375,20 @@
 				DEVELOPMENT_TEAM = UARL983TF6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Beezneez/Environment/info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mozzbuilds.appointly;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mozzbuilds.appointly.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -422,7 +400,7 @@
 			};
 			name = Dev;
 		};
-		A7418B402E4E603000A279CC /* Prod */ = {
+		A7418B402E4E603000A279CC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -434,29 +412,31 @@
 				DEVELOPMENT_TEAM = UARL983TF6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Beezneez/Environment/info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mozzbuilds.appointly;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mozzbuilds.appointly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = RELEASE;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Prod;
+			name = Release;
 		};
 		A7418B422E4E603000A279CC /* Dev */ = {
 			isa = XCBuildConfiguration;
@@ -477,7 +457,7 @@
 			};
 			name = Dev;
 		};
-		A7418B432E4E603000A279CC /* Prod */ = {
+		A7418B432E4E603000A279CC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -494,7 +474,7 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Beezneez.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Beezneez";
 			};
-			name = Prod;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -503,33 +483,33 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A7418B3C2E4E603000A279CC /* Dev */,
-				A7418B3D2E4E603000A279CC /* Prod */,
+				A7418B3D2E4E603000A279CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Prod;
+			defaultConfigurationName = Release;
 		};
 		A7418B3E2E4E603000A279CC /* Build configuration list for PBXNativeTarget "Beezneez" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A7418B3F2E4E603000A279CC /* Dev */,
-				A7418B402E4E603000A279CC /* Prod */,
+				A7418B402E4E603000A279CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Prod;
+			defaultConfigurationName = Release;
 		};
 		A7418B412E4E603000A279CC /* Build configuration list for PBXNativeTarget "BeezneezTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A7418B422E4E603000A279CC /* Dev */,
-				A7418B432E4E603000A279CC /* Prod */,
+				A7418B432E4E603000A279CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Prod;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A7418C8B2E4F724100A279CC /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+		A73534F12E4FC8F8008731F0 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/supabase/supabase-swift";
 			requirement = {
@@ -537,56 +517,38 @@
 				minimumVersion = 2.5.1;
 			};
 		};
-		A7418C982E4F72AA00A279CC /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 9.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A7418C8C2E4F724100A279CC /* Auth */ = {
+		A73534F22E4FC8F8008731F0 /* Auth */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A7418C8B2E4F724100A279CC /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			package = A73534F12E4FC8F8008731F0 /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Auth;
 		};
-		A7418C8E2E4F724100A279CC /* Functions */ = {
+		A73534F42E4FC8F8008731F0 /* Functions */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A7418C8B2E4F724100A279CC /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			package = A73534F12E4FC8F8008731F0 /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Functions;
 		};
-		A7418C902E4F724100A279CC /* PostgREST */ = {
+		A73534F62E4FC8F8008731F0 /* PostgREST */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A7418C8B2E4F724100A279CC /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			package = A73534F12E4FC8F8008731F0 /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = PostgREST;
 		};
-		A7418C922E4F724100A279CC /* Realtime */ = {
+		A73534F82E4FC8F8008731F0 /* Realtime */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A7418C8B2E4F724100A279CC /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			package = A73534F12E4FC8F8008731F0 /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Realtime;
 		};
-		A7418C942E4F724100A279CC /* Storage */ = {
+		A73534FA2E4FC8F8008731F0 /* Storage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A7418C8B2E4F724100A279CC /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			package = A73534F12E4FC8F8008731F0 /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Storage;
 		};
-		A7418C962E4F724100A279CC /* Supabase */ = {
+		A73534FC2E4FC8F8008731F0 /* Supabase */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A7418C8B2E4F724100A279CC /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			package = A73534F12E4FC8F8008731F0 /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Supabase;
-		};
-		A7418C992E4F72AA00A279CC /* GoogleSignIn */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A7418C982E4F72AA00A279CC /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
-			productName = GoogleSignIn;
-		};
-		A7418C9B2E4F72AA00A279CC /* GoogleSignInSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A7418C982E4F72AA00A279CC /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
-			productName = GoogleSignInSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

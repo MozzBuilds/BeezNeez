@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct Fonts {
-    static private let baseFont = CurrentScheme.baseFont ?? "Arial"
+    static private let baseFont = "Arial"
     
     static let titleCaption = Font.custom("\(baseFont)-Bold", size: 12)
     static let titleBase = Font.custom("\(baseFont)-Bold", size: 16)

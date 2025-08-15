@@ -1,19 +1,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var supabaseManager: SupabaseManager
     
     init() {
 //        UINavigationBar.appearance().backgroundColor = UIColor(Colors.appBackground)
 //        UINavigationBar.appearance().barTintColor = UIColor(Colors.appBackground)
     }
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        Group {
+            if supabaseManager.isAuthenticated {
+                // Main app view
+                MainTabView()
+            } else {
+                LoginView()
+            }
         }
-        .padding()
+        .task {
+            // Check for existing session on appear
+            await supabaseManager.checkSession()
+        }
     }
 }
 

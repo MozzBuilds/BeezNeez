@@ -40,3 +40,35 @@ import SwiftUI
 //        }
 //    }
 //}
+
+struct MainTabView: View {
+    @EnvironmentObject var supabaseManager: SupabaseManager
+    
+    var body: some View {
+        TabView {
+            Text("Discover")
+                .tabItem {
+                    Label("Discover", systemImage: "magnifyingglass")
+                }
+            
+            Text("Bookings")
+                .tabItem {
+                    Label("Bookings", systemImage: "calendar")
+                }
+            
+            Text("Profile")
+                .tabItem {
+                    Label("Profile", systemImage: "person.circle")
+                }
+        }
+        .overlay(alignment: .topTrailing) {
+            // Temporary sign out button for testing
+            Button("Sign Out") {
+                Task {
+                    try? await supabaseManager.signOut()
+                }
+            }
+            .padding()
+        }
+    }
+}
