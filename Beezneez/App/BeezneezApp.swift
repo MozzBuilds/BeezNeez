@@ -5,6 +5,8 @@ struct BeezneezApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+            
+            // Set any URL Callback schemes here, onOpenURL
         }
     }
 }

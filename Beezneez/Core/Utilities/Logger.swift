@@ -14,7 +14,7 @@ enum LogType {
 
 extension Logger {
     
-    static let shared = Logger()
+    static let shared = CurrentEnvironment.isLoggingEnabled ? Logger() : nil
     
     static func createLog(type: LogType, message: String, error: Error? = nil) {
         
@@ -27,13 +27,13 @@ extension Logger {
         switch type {
             
         case .info:
-            shared.info("\(logMessage)")
+            shared?.info("\(logMessage)")
         case .debug:
-            shared.debug("\(logMessage)")
+            shared?.debug("\(logMessage)")
         case .error:
-            shared.error("\(logMessage)")
+            shared?.error("\(logMessage)")
         case .critical:
-            shared.critical("\(logMessage)")
+            shared?.critical("\(logMessage)")
         }
     }
 }

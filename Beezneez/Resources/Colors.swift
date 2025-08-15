@@ -8,9 +8,44 @@ struct Colors {
     static let black = Color.black
     static let white = Color.white
     
-    // MARK: - Buttons
-
+    // MARK: - Misc
+    static let splashBackground = Color("")
+    static let appBackground = Color("")
+    static let tabViewBackground = Color("")
+    static let tabItemTint = Color("")
+    
     // MARK: - Text
+    static let title = Color("")
+    static let subtitle = Color("")
+    static let body = Color("")
+    static let bodyEmphasis = Color("")
+
+    // MARK: - Fields
+    static let fieldBackground = Color("")
+    static let fieldBorder = Color("")
+    static let fieldText = Color("")
+    
+    // MARK: - Buttons
+    static let primaryButtonText = Color("")
+    static let primaryButtonBorder = Color("")
+    static let primaryButtonBackground = Color("")
+    
+    static let secondaryButtonText = Color("")
+    static let secondaryButtonBorder = Color("")
+    static let secondaryButtonBackground = Color("")
+    
+    static let tertiaryButtonText = Color("")
+    static let tertiaryButtonBorder = Color("")
+    static let tertiaryButtonBackground = Color("")
+    
+    static let disabledButtonBackground = Color("")
+    static let disabledButtonBorder = Color("")
+    static let disabledButtonText = Color("")
+    
+    static let warningButtonText = Color("")
+    static let warningButtonBorder = Color("")
+    static let warningButtonBackground = Color("")
+    
     
     // MARK: - Helper Methods
     static func customColor(r: CGFloat, g: CGFloat, b: CGFloat) -> Color {

@@ -1,0 +1,12 @@
+PRODUCT_BUNDLE_IDENTIFIER = com.what.is.life
+APP_DISPLAY_NAME = NotApplicable
+
+// API Configuration
+SUPABASE_URL = https:/$()/giggity.co
+SUPABASE_ANON_KEY = somekeymaybe
+GOOGLE_CLIENT_ID = 123456-dev.apps.googleusercontent.com
+APPLE_SERVICE_ID = com.help.signin
+
+// Feature Flags
+ENABLE_LOGGING = YES
+ENABLE_TEST_USERS = YES

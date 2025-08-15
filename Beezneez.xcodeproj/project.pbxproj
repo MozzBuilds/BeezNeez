@@ -25,19 +25,11 @@
 			remoteGlobalIDString = A7418B1C2E4E602E00A279CC;
 			remoteInfo = Beezneez;
 		};
-		A7418B352E4E603000A279CC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A7418B152E4E602E00A279CC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A7418B1C2E4E602E00A279CC;
-			remoteInfo = Beezneez;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A7418B1D2E4E602E00A279CC /* Beezneez.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beezneez.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7418B2A2E4E603000A279CC /* BeezneezTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeezneezTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A7418B342E4E603000A279CC /* BeezneezUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeezneezUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -102,13 +94,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A7418B312E4E603000A279CC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -126,7 +111,6 @@
 			children = (
 				A7418B1D2E4E602E00A279CC /* Beezneez.app */,
 				A7418B2A2E4E603000A279CC /* BeezneezTests.xctest */,
-				A7418B342E4E603000A279CC /* BeezneezUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -187,26 +171,6 @@
 			productReference = A7418B2A2E4E603000A279CC /* BeezneezTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A7418B332E4E603000A279CC /* BeezneezUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A7418B442E4E603000A279CC /* Build configuration list for PBXNativeTarget "BeezneezUITests" */;
-			buildPhases = (
-				A7418B302E4E603000A279CC /* Sources */,
-				A7418B312E4E603000A279CC /* Frameworks */,
-				A7418B322E4E603000A279CC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A7418B362E4E603000A279CC /* PBXTargetDependency */,
-			);
-			name = BeezneezUITests;
-			packageProductDependencies = (
-			);
-			productName = BeezneezUITests;
-			productReference = A7418B342E4E603000A279CC /* BeezneezUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -221,10 +185,6 @@
 						CreatedOnToolsVersion = 16.4;
 					};
 					A7418B292E4E603000A279CC = {
-						CreatedOnToolsVersion = 16.4;
-						TestTargetID = A7418B1C2E4E602E00A279CC;
-					};
-					A7418B332E4E603000A279CC = {
 						CreatedOnToolsVersion = 16.4;
 						TestTargetID = A7418B1C2E4E602E00A279CC;
 					};
@@ -250,7 +210,6 @@
 			targets = (
 				A7418B1C2E4E602E00A279CC /* Beezneez */,
 				A7418B292E4E603000A279CC /* BeezneezTests */,
-				A7418B332E4E603000A279CC /* BeezneezUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -264,13 +223,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A7418B282E4E603000A279CC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A7418B322E4E603000A279CC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -294,13 +246,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A7418B302E4E603000A279CC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -309,16 +254,13 @@
 			target = A7418B1C2E4E602E00A279CC /* Beezneez */;
 			targetProxy = A7418B2B2E4E603000A279CC /* PBXContainerItemProxy */;
 		};
-		A7418B362E4E603000A279CC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A7418B1C2E4E602E00A279CC /* Beezneez */;
-			targetProxy = A7418B352E4E603000A279CC /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		A7418B3C2E4E603000A279CC /* Debug */ = {
+		A7418B3C2E4E603000A279CC /* Dev */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = A7418B1F2E4E602E00A279CC /* Beezneez */;
+			baseConfigurationReferenceRelativePath = Environment/Configs/Dev.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -352,6 +294,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEV = YES;
 				DEVELOPMENT_TEAM = NH75BX6HA4;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -375,14 +318,17 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROD_DEBUG = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = Debug;
+			name = Dev;
 		};
-		A7418B3D2E4E603000A279CC /* Release */ = {
+		A7418B3D2E4E603000A279CC /* Prod */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = A7418B1F2E4E602E00A279CC /* Beezneez */;
+			baseConfigurationReferenceRelativePath = Environment/Configs/Prod.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -416,6 +362,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEV = YES;
 				DEVELOPMENT_TEAM = NH75BX6HA4;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -432,13 +379,14 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PROD_DEBUG = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Prod;
 		};
-		A7418B3F2E4E603000A279CC /* Debug */ = {
+		A7418B3F2E4E603000A279CC /* Dev */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -472,9 +420,9 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Debug;
+			name = Dev;
 		};
-		A7418B402E4E603000A279CC /* Release */ = {
+		A7418B402E4E603000A279CC /* Prod */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -508,9 +456,9 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Release;
+			name = Prod;
 		};
-		A7418B422E4E603000A279CC /* Debug */ = {
+		A7418B422E4E603000A279CC /* Dev */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -527,9 +475,9 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Beezneez.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Beezneez";
 			};
-			name = Debug;
+			name = Dev;
 		};
-		A7418B432E4E603000A279CC /* Release */ = {
+		A7418B432E4E603000A279CC /* Prod */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -546,41 +494,7 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Beezneez.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Beezneez";
 			};
-			name = Release;
-		};
-		A7418B452E4E603000A279CC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NH75BX6HA4;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = MozzBuilds.BeezneezUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Beezneez;
-			};
-			name = Debug;
-		};
-		A7418B462E4E603000A279CC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NH75BX6HA4;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = MozzBuilds.BeezneezUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Beezneez;
-			};
-			name = Release;
+			name = Prod;
 		};
 /* End XCBuildConfiguration section */
 
@@ -588,38 +502,29 @@
 		A7418B182E4E602E00A279CC /* Build configuration list for PBXProject "Beezneez" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A7418B3C2E4E603000A279CC /* Debug */,
-				A7418B3D2E4E603000A279CC /* Release */,
+				A7418B3C2E4E603000A279CC /* Dev */,
+				A7418B3D2E4E603000A279CC /* Prod */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Prod;
 		};
 		A7418B3E2E4E603000A279CC /* Build configuration list for PBXNativeTarget "Beezneez" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A7418B3F2E4E603000A279CC /* Debug */,
-				A7418B402E4E603000A279CC /* Release */,
+				A7418B3F2E4E603000A279CC /* Dev */,
+				A7418B402E4E603000A279CC /* Prod */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Prod;
 		};
 		A7418B412E4E603000A279CC /* Build configuration list for PBXNativeTarget "BeezneezTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A7418B422E4E603000A279CC /* Debug */,
-				A7418B432E4E603000A279CC /* Release */,
+				A7418B422E4E603000A279CC /* Dev */,
+				A7418B432E4E603000A279CC /* Prod */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A7418B442E4E603000A279CC /* Build configuration list for PBXNativeTarget "BeezneezUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A7418B452E4E603000A279CC /* Debug */,
-				A7418B462E4E603000A279CC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Prod;
 		};
 /* End XCConfigurationList section */
 
