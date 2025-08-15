@@ -79,7 +79,6 @@ class SupabaseManager: ObservableObject {
         }
         
         do {
-            // Fetch from your custom users table using the auth user ID
             let response = try await client
                 .from("users")
                 .select()
@@ -87,10 +86,28 @@ class SupabaseManager: ObservableObject {
                 .single()
                 .execute()
             
-            // Decode the response
+            // Custom decoder for database timestamps
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
-            decoder.dateDecodingStrategy = .iso8601
+            
+            // Handle both ISO8601 and timestamp formats
+            decoder.dateDecodingStrategy = .custom { decoder in
+                let container = try decoder.singleValueContainer()
+                if let dateString = try? container.decode(String.self) {
+                    // Try ISO8601 first
+                    if let date = ISO8601DateFormatter().date(from: dateString) {
+                        return date
+                    }
+                    // Try without milliseconds
+                    let formatter = DateFormatter()
+                    formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+                    formatter.timeZone = TimeZone(secondsFromGMT: 0)
+                    if let date = formatter.date(from: dateString) {
+                        return date
+                    }
+                }
+                throw DecodingError.dataCorruptedError(in: container, debugDescription: "Cannot decode date")
+            }
             
             let userData = response.data
             let user = try decoder.decode(User.self, from: userData)

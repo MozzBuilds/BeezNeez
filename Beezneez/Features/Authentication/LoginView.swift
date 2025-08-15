@@ -1,8 +1,6 @@
 import SwiftUI
 import AuthenticationServices
 import Supabase
-
-// MARK: - Login View
 struct LoginView: View {
     @EnvironmentObject var supabaseManager: SupabaseManager
     @State private var isLoading = false
@@ -77,6 +75,7 @@ struct LoginView: View {
     @MainActor
     private func signInWithApple(_ result: Result<ASAuthorization, Error>) async {
         isLoading = true
+        defer { isLoading = false }
         
         do {
             switch result {
@@ -100,40 +99,59 @@ struct LoginView: View {
                 let authUserId = session.user.id.uuidString
                 
                 // Check if user exists in our users table
-                let existingUserResponse = try? await supabaseManager.client
+                let query = supabaseManager.client
                     .from("users")
                     .select()
                     .eq("auth_user_id", value: authUserId)
                     .single()
-                    .execute()
                 
-                if existingUserResponse?.data != nil {
-                    // User exists, just update last login
+                do {
+                    // Try to fetch existing user
+                    let response = try await query.execute()
+                    
+                    // User exists, update last login
+                    struct LastLoginUpdate: Encodable {
+                        let last_login_at: Date
+                    }
+                    
+                    let update = LastLoginUpdate(last_login_at: Date())
+                    
                     try await supabaseManager.client
                         .from("users")
-                        .update([
-                            "last_login_at": ISO8601DateFormatter().string(from: Date())
-                        ])
+                        .update(update)
                         .eq("auth_user_id", value: authUserId)
                         .execute()
-                } else {
-                    // Create new user in our users table
-//                    let newUser = [
-//                        "id": UUID().uuidString,
-//                        "auth_user_id": authUserId,
-//                        "auth_provider": "apple",
-//                        "auth_provider_id": appleIDCredential.user,
-//                        "email": appleIDCredential.email ?? session.user.email ?? "",
-//                        "first_name": appleIDCredential.fullName?.givenName ?? "",
-//                        "last_name": appleIDCredential.fullName?.familyName ?? "",
-//                        "preferred_contact_method": "email",
-//                        "is_active": true
-//                    ] as [String: Any]
-//                    
-//                    try await supabaseManager.client
-//                        .from("users")
-//                        .insert(newUser)
-//                        .execute()
+                    
+                    print("Existing user logged in")
+                    
+                } catch {
+                    // User doesn't exist, create new one
+                    print("Creating new user")
+                    
+                    // Create user struct matching database schema
+                    let newUser = User(
+                        id: UUID().uuidString,
+                        authUserId: authUserId,
+                        authProvider: "apple",
+                        authProviderId: appleIDCredential.user,
+                        email: appleIDCredential.email ?? session.user.email ?? "",
+                        phoneNumber: nil,
+                        firstName: appleIDCredential.fullName?.givenName ?? "",
+                        lastName: appleIDCredential.fullName?.familyName ?? "",
+                        profileImageId: nil,
+                        preferredContactMethod: "email",
+                        createdAt: Date(),
+                        updatedAt: Date(),
+                        lastLoginAt: Date(),
+                        isActive: true
+                    )
+                    
+                    try await supabaseManager.client
+                        .from("users")
+                        .insert(newUser)
+                        .execute()
+                    
+                    print("New user created successfully")
                 }
                 
                 // The auth state listener in SupabaseManager will handle the rest
@@ -142,14 +160,12 @@ struct LoginView: View {
                 throw error
             }
         } catch {
+            print("Sign in error: \(error)")
             await MainActor.run {
                 self.errorMessage = error.localizedDescription
                 self.showError = true
-                self.isLoading = false
             }
         }
-        
-        isLoading = false
     }
 }
 
@@ -168,5 +184,11 @@ enum AuthError: LocalizedError {
         case .userCreationFailed:
             return "Failed to create user account. Please try again."
         }
+    }
+}
+
+extension Date {
+    var iso8601String: String {
+        ISO8601DateFormatter().string(from: self)
     }
 }
