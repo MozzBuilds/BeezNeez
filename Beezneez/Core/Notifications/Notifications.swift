@@ -35,3 +35,78 @@ class Notifications {
         }
     }
 }
+//
+//class AppNotificationsDelegate: NSObject, UNUserNotificationCenterDelegate {
+//    
+//    var testSanityCheck = 0
+//    
+//    func userNotificationCenter(_: UNUserNotificationCenter, willPresent _: UNNotification, withCompletionHandler completionHandler: (UNNotificationPresentationOptions) -> Void) {
+//        
+//        // Change this to your preferred presentation option
+//        completionHandler([.banner, .sound, .list])
+//    }
+//    
+//    func userNotificationCenter(_: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+//        defer { completionHandler() }
+//        
+//        @Dependency(\.messagingProvider) var provider
+//
+//        if let channelID = provider.channelIDFromNotification(response) {
+//            DispatchQueue.main.async {
+//                // Stream link
+//                AppDelegate.shared.load(link: .streamChannel(cid: channelID))
+//            }
+//        } else {
+//            // Regular notification
+//            let userInfo = response.notification.request.content.userInfo
+//            let type = userInfo["notificationType"] as? String
+//            Ampli.instance.pushNotificationClicked(type: type)
+//            
+//            guard let link = Linkable(dictionary: userInfo) else { return }
+//            
+//            /// Our backend will continue to send push notifications for system messages
+//            /// This ensures that if the user has Stream Chat enabled, the conversation is loaded in the Stream UI
+//            Task {
+//                var link = link
+//                if case let .message(uuid) = link {
+//                    let channelID = provider.createChannelId("")
+//                    link = .streamChannel(cid: channelID)
+//                }
+//                
+//                logger.info("[AppNotificationsDelegate] Navigating to link from Push Notification")
+//                
+//                await AppDelegate.shared.load(link: link)
+//            }
+//        }
+//    }
+//    
+//    func application(_: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) async -> UIBackgroundFetchResult {
+//        guard let identifier = userInfo["notification_id"] as? String else {
+//            logger.info("[AppNotificationsDelegate] Remote Notification missing notification_id")
+//            return .noData
+//        }
+//        
+//        guard let notificationType = (userInfo["type"] as? String), notificationType == "remove-notification" else { return .noData }
+//        
+//        logger.info("[AppNotificationsDelegate] Removing delivered notifications")
+//        
+//        UNUserNotificationCenter
+//            .current()
+//            .removeDeliveredNotifications(withIdentifiers: [identifier])
+//        
+//        return .noData
+//    }
+//    
+//    func setToken(deviceToken: Data) {
+//        if deviceToken.isEmpty {
+//            logger.info("[AppNotificationsDelegate] New APNs token received was empty")
+//            return
+//        }
+//        
+//        logger.info("[AppNotificationsDelegate] New APNs token received")
+//        
+//        StorageUtils.setApnsToken(deviceToken)
+//        
+//        Messaging.messaging().apnsToken = deviceToken /// Register APNS token with firebase
+//    }
+//}
